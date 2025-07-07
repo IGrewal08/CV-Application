@@ -1,0 +1,26 @@
+#root {
+  min-width: 980px;
+  margin: 1rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_field_links {
+  display: flex;
+  justify-content: center;
+  gap: 3vh;
+}
+.submit_general {
+  margin: 1em;
+  background-color: green;
+}
+.read-the-docs {
+  color: #888;
+}
