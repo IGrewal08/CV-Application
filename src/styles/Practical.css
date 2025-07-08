@@ -1,23 +1,34 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .start_end_date {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .job_divider {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .practical_title_DOM {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .job_title {
-    display: flex;
+  display: flex;
+}
+
+.edit_button_practical {
+  max-width: 4.5rem;
+  max-height: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(150, 0, 0, 0.5);
 }

@@ -50,7 +50,7 @@ export default function Practical() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setEdit(false);
+    setEdit(!edit);
   }
 
   if (edit) {
@@ -77,25 +77,36 @@ export default function Practical() {
         {formData.map((form) => (
           <div className="container">
             <div className="practical_title_DOM">
-                <div className="job_title">
-                    <h4>
-                    <b>{form.name}</b>
-                    </h4>
-                    <h4><i>, {form.location}</i></h4>
-                </div>
-                <div className="start_end_date_DOM">
-                    <h4 className="date">{form.dateStart} - {form.dateEnd}</h4>
-                </div>
+              <div className="job_title">
+                <h4>
+                  <b>{form.name}</b>
+                </h4>
+                <h4>
+                  <i>, {form.location}</i>
+                </h4>
+              </div>
+              <div className="start_end_date_DOM">
+                <h4 className="date">
+                  {form.dateStart} - {form.dateEnd}
+                </h4>
+              </div>
             </div>
             <div className="data_DOM">
-                <ul>
-                    <li>{form.description_1}</li>
-                    <li>{form.description_2}</li>
-                    <li>{form.description_3}</li>
-                </ul>
+              <ul>
+                <li>{form.description_1}</li>
+                <li>{form.description_2}</li>
+                <li>{form.description_3}</li>
+              </ul>
             </div>
           </div>
         ))}
+        <button
+          className="edit_button_practical"
+          type="button"
+          onClick={handleSubmit}
+        >
+          Edit
+        </button>
       </>
     );
   }

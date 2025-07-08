@@ -46,7 +46,7 @@ export default function Educational() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setEdit(false);
+    setEdit(!edit);
   }
 
   if (edit) {
@@ -79,16 +79,23 @@ export default function Educational() {
               <h4>{form.location}</h4>
             </div>
             <div className="data_DOM">
-                <ul>
-                    <li>{form.degree}</li>
-                    <li>{form.GPA}</li>
-                </ul>
-                <ul className="offset_date">
-                    <li className="date">{form.gradDate}</li>
-                </ul>
+              <ul>
+                <li>{form.degree}</li>
+                <li>{form.GPA}</li>
+              </ul>
+              <ul className="offset_date">
+                <li className="date">{form.gradDate}</li>
+              </ul>
             </div>
           </div>
         ))}
+        <button
+          className="edit_button_educational"
+          type="button"
+          onClick={handleSubmit}
+        >
+          Edit
+        </button>
       </>
     );
   }

@@ -1,31 +1,42 @@
 .input_name {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .container {
-    padding: 0 1rem 0.5rem 1rem;
+  padding: 0 1rem 0.5rem 1rem;
 }
 
 .educational_title_DOM {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .data_DOM {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    padding-left: 2rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  padding-left: 2rem;
 }
 
 .offset_date {
-    list-style: none;
+  list-style: none;
+}
+
+.edit_button_educational {
+  max-width: 4.5rem;
+  max-height: 2.5rem;
+  position: absolute;
+  top: 29.5%;
+  left: 90%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(150, 0, 0, 0.5);
 }

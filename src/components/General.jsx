@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '/src/styles/General.css';
+import "/src/styles/General.css";
 
 export default function General() {
   const [edit, setEdit] = useState(true);
@@ -24,43 +24,73 @@ export default function General() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setEdit(false);
+    setEdit(!edit);
   }
 
   if (edit) {
     return (
-        <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="input_field_links name">
-            <Name nameData={formData} onChange={handleInputChange} />
+          <Name nameData={formData} onChange={handleInputChange} />
         </div>
 
         <div className="input_field_links info">
-            <Info infoData={formData} onChange={handleInputChange} />
+          <Info infoData={formData} onChange={handleInputChange} />
         </div>
 
         <div className="input_field_links link">
-            <Links linkData={formData} onChange={handleInputChange} />
+          <Links linkData={formData} onChange={handleInputChange} />
         </div>
 
-        <button className="submit_general" type="submit" onClick={handleSubmit}>Submit</button>
-        </form>
+        <button className="submit_general" type="submit" onClick={handleSubmit}>
+          Submit
+        </button>
+      </form>
     );
   } else {
-    const fullName = (formData.firstName + ' ' + formData.lastName).toUpperCase();
+    const fullName = (
+      formData.firstName +
+      " " +
+      formData.lastName
+    ).toUpperCase();
     return (
-        <>
-            <h1>{fullName}</h1>
-            <div className="info_DOM">
-              <h5><a href={formData.emailAddress}>{formData.emailAddress}</a></h5>
-              <h5>{formData.phoneNumber}</h5>
-              <h5>{formData.Address}</h5>
-            </div>
-            <div className="links_DOM">
-              <h5><a href="#"><b>LinkedIn: </b>{formData.LinkedIn}</a></h5>
-              <h5><a href="#"><b>GitHub: </b>{formData.GitHub}</a></h5>
-              <h5><a href="#"><b>Personal Website: </b>{formData.personalWebsite}</a></h5>
-            </div>
-        </>
+      <>
+        <h1>{fullName}</h1>
+        <div className="info_DOM">
+          <h5>
+            <a href={formData.emailAddress}>{formData.emailAddress}</a>
+          </h5>
+          <h5>{formData.phoneNumber}</h5>
+          <h5>{formData.Address}</h5>
+        </div>
+        <div className="links_DOM">
+          <h5>
+            <a href="#">
+              <b>LinkedIn: </b>
+              {formData.LinkedIn}
+            </a>
+          </h5>
+          <h5>
+            <a href="#">
+              <b>GitHub: </b>
+              {formData.GitHub}
+            </a>
+          </h5>
+          <h5>
+            <a href="#">
+              <b>Personal Website: </b>
+              {formData.personalWebsite}
+            </a>
+          </h5>
+        </div>
+        <button
+          className="edit_button_general"
+          type="button"
+          onClick={handleSubmit}
+        >
+          Edit
+        </button>
+      </>
     );
   }
 }
