@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+    border-bottom: 1px solid blue;
+}
+
+h1 {
+    margin-top: 3vh;
+}
+
+.input_field_links {
+  display: flex;
+  justify-content: center;
+  gap: 3vh;
+}
+.submit_general {
+  margin: 1em;
+  background-color: green;
+}
+
+.info_DOM,
+.links_DOM {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vh;
+}

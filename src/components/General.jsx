@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../App.css";
+import '/src/styles/General.css';
 
 export default function General() {
   const [edit, setEdit] = useState(true);
@@ -50,7 +50,16 @@ export default function General() {
     return (
         <>
             <h1>{fullName}</h1>
-            <div>test</div>
+            <div className="info_DOM">
+              <h5><a href={formData.emailAddress}>{formData.emailAddress}</a></h5>
+              <h5>{formData.phoneNumber}</h5>
+              <h5>{formData.Address}</h5>
+            </div>
+            <div className="links_DOM">
+              <h5><a href="#"><b>LinkedIn: </b>{formData.LinkedIn}</a></h5>
+              <h5><a href="#"><b>GitHub: </b>{formData.GitHub}</a></h5>
+              <h5><a href="#"><b>Personal Website: </b>{formData.personalWebsite}</a></h5>
+            </div>
         </>
     );
   }

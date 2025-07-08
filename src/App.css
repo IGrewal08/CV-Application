@@ -5,22 +5,18 @@
   text-align: center;
   background-color: white;
   color: black;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-.input_field {
-  display: flex;
-  flex-direction: column;
-}
-
-.input_field_links {
-  display: flex;
-  justify-content: center;
-  gap: 3vh;
-}
-.submit_general {
-  margin: 1em;
-  background-color: green;
-}
 .read-the-docs {
   color: #888;
+}
+
+.divider {
+  border-bottom: 2px solid black;
+  text-align: left;
+}
+
+.date {
+  font-weight: 100;
 }

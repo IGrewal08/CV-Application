@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.start_end_date {
+    display: flex;
+    gap: 1rem;
+}
+
+.job_divider {
+    padding-bottom: 1rem;
+}
+
+.practical_title_DOM {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.job_title {
+    display: flex;
+}

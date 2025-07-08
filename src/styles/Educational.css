@@ -1,0 +1,31 @@
+.input_name {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container {
+    padding: 0 1rem 0.5rem 1rem;
+}
+
+.educational_title_DOM {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.data_DOM {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.offset_date {
+    list-style: none;
+}
