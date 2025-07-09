@@ -14,14 +14,14 @@ export default function Educational() {
     },
   ]);
 
-  const handleInputChange = (e, ID) => {
+  function handleInputChange(e, ID) {
     const { name, value } = e.target;
     const myArr = formData.map((form) =>
       form.ID === ID ? update(name, value, form) : form
     );
 
     setFormData(myArr);
-  };
+  }
 
   function update(name, value, prevForm) {
     const changedForm = {
